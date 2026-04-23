@@ -7,40 +7,84 @@ const navLinks = [
 ];
 ---
 
-<nav id="navbar" style="position: fixed; top: 0; left: 0; right: 0; z-index: 999; padding: 1.5rem clamp(1.5rem, 5vw, 4rem); display: flex; align-items: center; justify-content: space-between; transition: background 0.3s ease, box-shadow 0.3s ease;">
-  <a href="/" class="nav-logo" style="font-family: var(--font-serif); font-weight: 400; font-size: 1.1rem; letter-spacing: 0.05em; color: var(--cream-100); display: flex; flex-direction: column; line-height: 1.2;">
-    <span style="color: var(--gold-400);">Grozav</span> Svetlana
+<nav id="navbar">
+  <a href="/" class="nav-logo">
+    <span class="nav-logo-first">Grozav</span> Svetlana
   </a>
 
-  <ul class="nav-links" id="nav-links" style="display: flex; align-items: center; gap: 2rem; list-style: none; margin: 0; padding: 0;">
+  <ul class="nav-links" id="nav-links">
     {navLinks.map(link => (
       <li>
-        <a
-          href={link.href}
-          class={link.cta ? 'nav-link nav-cta' : 'nav-link'}
-          style={link.cta
-            ? 'font-size: 0.75rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold-400); border: 1px solid var(--gold-400); padding: 0.5rem 1.25rem; transition: background 0.3s ease, color 0.3s ease;'
-            : 'font-size: 0.8rem; font-weight: 400; letter-spacing: 0.12em; text-transform: uppercase; color: var(--slate-400); transition: color 0.3s ease; position: relative;'}
-        >
+        <a href={link.href} class={link.cta ? 'nav-link nav-cta' : 'nav-link'}>
           {link.label}
         </a>
       </li>
     ))}
   </ul>
 
-  <button class="nav-toggle" id="nav-toggle" aria-label="Meniu" style="display: none; flex-direction: column; gap: 5px; padding: 4px; cursor: pointer; border: none; background: none;">
-    <span style="display: block; width: 24px; height: 1px; background: var(--cream-100); transition: 0.3s ease;"></span>
-    <span style="display: block; width: 24px; height: 1px; background: var(--cream-100); transition: 0.3s ease;"></span>
-    <span style="display: block; width: 24px; height: 1px; background: var(--cream-100); transition: 0.3s ease;"></span>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Meniu">
+    <span></span>
+    <span></span>
+    <span></span>
   </button>
 </nav>
 
 <style>
-  nav.scrolled {
-    background: rgba(10, 14, 26, 0.92) !important;
+  #navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem clamp(1.5rem, 5vw, 4rem);
+    background: transparent;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  #navbar.scrolled {
+    background: rgba(10, 14, 26, 0.92);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    box-shadow: 0 1px 0 rgba(201, 168, 76, 0.1) !important;
+    box-shadow: 0 1px 0 rgba(201, 168, 76, 0.1);
+  }
+
+  .nav-logo {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    font-size: 1.1rem;
+    letter-spacing: 0.05em;
+    color: var(--cream-100);
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+    text-decoration: none;
+  }
+
+  .nav-logo-first {
+    color: var(--gold-400);
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-link {
+    font-size: 0.8rem;
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--slate-400);
+    transition: color 0.3s ease;
+    position: relative;
+    text-decoration: none;
   }
 
   .nav-link:not(.nav-cta)::after {
@@ -55,55 +99,93 @@ const navLinks = [
   }
 
   .nav-link:not(.nav-cta):hover {
-    color: var(--cream-100) !important;
+    color: var(--cream-100);
   }
 
   .nav-link:not(.nav-cta):hover::after {
     width: 100%;
   }
 
-  .nav-cta:hover {
-    background: var(--gold-400) !important;
-    color: var(--navy-950) !important;
+  .nav-cta {
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    color: var(--gold-400);
+    border: 1px solid var(--gold-400);
+    padding: 0.5rem 1.25rem;
+    transition: background 0.3s ease, color 0.3s ease;
   }
 
+  .nav-cta:hover {
+    background: var(--gold-400);
+    color: var(--navy-950);
+  }
+
+  .nav-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    padding: 4px;
+    cursor: pointer;
+    border: none;
+    background: none;
+  }
+
+  .nav-toggle span {
+    display: block;
+    width: 24px;
+    height: 1px;
+    background: var(--cream-100);
+    transition: 0.3s ease;
+  }
+
+  /* ── Mobile ── */
   @media (max-width: 768px) {
-    /* Safari iOS fix: solid background, no blur, safe-area padding for notch */
-    nav {
-      background: rgb(10, 14, 26) !important;
-      backdrop-filter: none !important;
-      -webkit-backdrop-filter: none !important;
-      box-shadow: 0 1px 0 rgba(201, 168, 76, 0.12) !important;
-      padding-top: calc(1.5rem + env(safe-area-inset-top, 0px)) !important;
+    #navbar {
+      /* Solid background always — Safari iOS fix */
+      background: rgb(10, 14, 26);
+      box-shadow: 0 1px 0 rgba(201, 168, 76, 0.12);
+      /* Safe area inset for notch — padding shorthand controlled here, not inline */
+      padding-top: calc(1rem + env(safe-area-inset-top, 0px));
+      padding-bottom: 1rem;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+
+    /* Override scrolled on mobile — keep same solid look */
+    #navbar.scrolled {
+      background: rgb(10, 14, 26);
+      backdrop-filter: none;
+      -webkit-backdrop-filter: none;
     }
 
     .nav-toggle {
-      display: flex !important;
+      display: flex;
     }
 
     .nav-links {
-      position: fixed !important;
-      top: 0 !important;
-      right: -100% !important;
-      width: min(300px, 80vw) !important;
-      height: 100vh !important;
-      background: var(--navy-900) !important;
-      flex-direction: column !important;
-      justify-content: center !important;
-      align-items: flex-start !important;
-      padding: 4rem 3rem !important;
-      gap: 2rem !important;
-      border-left: 1px solid rgba(201, 168, 76, 0.1) !important;
-      transition: right 0.3s ease !important;
-      z-index: 998 !important;
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: min(300px, 80vw);
+      height: 100vh;
+      background: var(--navy-900);
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 4rem 3rem;
+      gap: 2rem;
+      border-left: 1px solid rgba(201, 168, 76, 0.1);
+      transition: right 0.3s ease;
+      z-index: 998;
     }
 
     .nav-links.open {
-      right: 0 !important;
+      right: 0;
     }
 
     .nav-link:not(.nav-cta) {
-      font-size: 0.9rem !important;
+      font-size: 0.9rem;
     }
   }
 </style>
