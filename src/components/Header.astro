@@ -68,12 +68,13 @@ const navLinks = [
   }
 
   @media (max-width: 768px) {
-    /* Always show background on mobile — no transparent nav */
+    /* Safari iOS fix: solid background, no blur, safe-area padding for notch */
     nav {
-      background: rgba(10, 14, 26, 0.97) !important;
-      backdrop-filter: blur(12px) !important;
-      -webkit-backdrop-filter: blur(12px) !important;
-      box-shadow: 0 1px 0 rgba(201, 168, 76, 0.08) !important;
+      background: rgb(10, 14, 26) !important;
+      backdrop-filter: none !important;
+      -webkit-backdrop-filter: none !important;
+      box-shadow: 0 1px 0 rgba(201, 168, 76, 0.12) !important;
+      padding-top: calc(1.5rem + env(safe-area-inset-top, 0px)) !important;
     }
 
     .nav-toggle {
