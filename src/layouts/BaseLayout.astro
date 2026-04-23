@@ -1,0 +1,95 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'Grozav Svetlana — Avocat | Drept Civil, Republica Moldova',
+  description = 'Avocat Grozav Svetlana — servicii juridice de drept civil în Republica Moldova. Litigii civile, proprietate, succesiuni, contracte, dreptul familiei.',
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="keywords" content="avocat Moldova, drept civil, avocat Chișinău, litigii civile, consultanță juridică, avocat Grozav Svetlana" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  </head>
+  <body>
+    <div id="scroll-progress-track"><div id="scroll-progress"></div></div>
+    <slot />
+    <script>
+      // Scroll to top on page load/refresh
+      if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'manual';
+      }
+      window.scrollTo(0, 0);
+
+      // Scroll progress bar
+      const progressBar = document.getElementById('scroll-progress');
+      window.addEventListener('scroll', () => {
+        if (!progressBar) return;
+        const scrollTop = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+        progressBar.style.width = progress + '%';
+      }, { passive: true });
+
+      // Scroll animations
+      const animateEls = document.querySelectorAll('.animate-fade-up, .animate-fade-in');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const el = entry.target as HTMLElement;
+            const index = parseInt(el.style.getPropertyValue('--index') || '0');
+            const delay = index * 100;
+            setTimeout(() => {
+              el.classList.add('visible');
+            }, delay);
+            observer.unobserve(el);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+      animateEls.forEach(el => observer.observe(el));
+
+      // Stats counter animation
+      const statNumbers = document.querySelectorAll<HTMLElement>('.stat-number[data-target]');
+      const countObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const el = entry.target as HTMLElement;
+            const target = parseInt(el.getAttribute('data-target') || '0');
+            const suffix = el.getAttribute('data-suffix') || '';
+            const duration = 1800;
+            const step = target / (duration / 16);
+            let current = 0;
+            const timer = setInterval(() => {
+              current += step;
+              if (current >= target) {
+                current = target;
+                clearInterval(timer);
+              }
+              el.textContent = Math.floor(current) + suffix;
+            }, 16);
+            countObserver.unobserve(el);
+          }
+        });
+      }, { threshold: 0.5 });
+
+      statNumbers.forEach(el => countObserver.observe(el));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,2028 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grozav Svetlana — Avocat | Drept Civil, Republica Moldova</title>
+  <meta name="description" content="Avocat Grozav Svetlana — servicii juridice de drept civil în Republica Moldova. Litigii civile, proprietate, succesiuni, contracte, dreptul familiei.">
+  <meta name="keywords" content="avocat Moldova, drept civil, avocat Chișinău, litigii civile, consultanță juridică, avocat Grozav Svetlana">
+  <meta property="og:title" content="Grozav Svetlana — Avocat | Drept Civil, Republica Moldova">
+  <meta property="og:description" content="Servicii juridice profesionale de drept civil în Republica Moldova. Litigii, proprietate, succesiuni, contracte, dreptul familiei.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+  <style>
+    /* ============================
+       1. CSS CUSTOM PROPERTIES
+       ============================ */
+    :root {
+      --navy-950: #0A0E1A;
+      --navy-900: #0F1628;
+      --navy-800: #162040;
+      --navy-700: #1E2D56;
+      --gold-400: #C9A84C;
+      --gold-300: #D4B566;
+      --gold-200: #E8D5A3;
+      --gold-glow: rgba(201, 168, 76, 0.15);
+      --cream-100: #F5F0E8;
+      --cream-200: #E8E0D0;
+      --slate-400: #94A3B8;
+      --slate-500: #64748B;
+
+      --space-1: 0.5rem;
+      --space-2: 1rem;
+      --space-3: 1.5rem;
+      --space-4: 2rem;
+      --space-6: 3rem;
+      --space-8: 4rem;
+      --space-12: 6rem;
+      --space-16: 8rem;
+
+      --container-max: 1200px;
+      --container-pad: clamp(1.5rem, 5vw, 4rem);
+
+      --transition-base: 0.3s ease;
+      --transition-slow: 0.7s ease;
+
+      --font-serif: 'Cormorant Garamond', Georgia, serif;
+      --font-sans: 'Inter', system-ui, sans-serif;
+    }
+
+    /* ============================
+       2. CSS RESET + BASE
+       ============================ */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      background-color: var(--navy-950);
+      color: var(--cream-100);
+      font-family: var(--font-sans);
+      font-weight: 300;
+      line-height: 1.7;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+    button { cursor: pointer; border: none; background: none; font-family: inherit; }
+
+    /* Scroll margin for sticky nav */
+    section { scroll-margin-top: 80px; }
+
+    /* ============================
+       3. SCROLL PROGRESS BAR
+       ============================ */
+    #scroll-progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 2px;
+      background: linear-gradient(90deg, var(--gold-400), var(--gold-200));
+      z-index: 1000;
+      transition: width 0.1s linear;
+    }
+
+    /* ============================
+       4. NAVIGATION
+       ============================ */
+    nav {
+      position: fixed;
+      top: 2px;
+      left: 0;
+      right: 0;
+      z-index: 999;
+      padding: var(--space-3) var(--container-pad);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: background var(--transition-base), backdrop-filter var(--transition-base), box-shadow var(--transition-base);
+    }
+
+    nav.scrolled {
+      background: rgba(10, 14, 26, 0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      box-shadow: 0 1px 0 rgba(201, 168, 76, 0.1);
+    }
+
+    .nav-logo {
+      font-family: var(--font-serif);
+      font-weight: 400;
+      font-size: 1.1rem;
+      letter-spacing: 0.05em;
+      color: var(--cream-100);
+    }
+
+    .nav-logo span {
+      color: var(--gold-400);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: var(--space-4);
+    }
+
+    .nav-links a {
+      font-size: 0.8rem;
+      font-weight: 400;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--slate-400);
+      transition: color var(--transition-base);
+      position: relative;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: var(--gold-400);
+      transition: width var(--transition-base);
+    }
+
+    .nav-links a:hover {
+      color: var(--cream-100);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .nav-cta {
+      font-size: 0.75rem !important;
+      font-weight: 500 !important;
+      letter-spacing: 0.15em !important;
+      text-transform: uppercase !important;
+      color: var(--gold-400) !important;
+      border: 1px solid var(--gold-400);
+      padding: 0.5rem 1.25rem;
+      transition: background var(--transition-base), color var(--transition-base) !important;
+    }
+
+    .nav-cta:hover {
+      background: var(--gold-400) !important;
+      color: var(--navy-950) !important;
+    }
+
+    .nav-cta::after { display: none !important; }
+
+    /* Mobile menu */
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      padding: 4px;
+      cursor: pointer;
+    }
+
+    .nav-toggle span {
+      display: block;
+      width: 24px;
+      height: 1px;
+      background: var(--cream-100);
+      transition: var(--transition-base);
+    }
+
+    @media (max-width: 768px) {
+      .nav-toggle { display: flex; }
+
+      .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: min(300px, 80vw);
+        height: 100vh;
+        background: var(--navy-900);
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: var(--space-8) var(--space-6);
+        gap: var(--space-4);
+        border-left: 1px solid rgba(201, 168, 76, 0.1);
+        transition: right var(--transition-base);
+        z-index: 998;
+      }
+
+      .nav-links.open {
+        right: 0;
+      }
+
+      .nav-links a {
+        font-size: 0.9rem;
+      }
+
+      .nav-cta {
+        margin-top: var(--space-3);
+      }
+    }
+
+    /* ============================
+       5. UTILITY CLASSES
+       ============================ */
+    .container {
+      max-width: var(--container-max);
+      margin: 0 auto;
+      padding: 0 var(--container-pad);
+    }
+
+    .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-2);
+      font-family: var(--font-sans);
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold-400);
+      margin-bottom: var(--space-3);
+    }
+
+    .section-label::before,
+    .section-label::after {
+      content: '';
+      display: block;
+      width: 30px;
+      height: 1px;
+      background: var(--gold-400);
+      opacity: 0.6;
+    }
+
+    .section-title {
+      font-family: var(--font-serif);
+      font-weight: 300;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      line-height: 1.15;
+      color: var(--cream-100);
+    }
+
+    .section-title em {
+      font-style: italic;
+      color: var(--gold-300);
+    }
+
+    /* Scroll animations */
+    .animate-fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .animate-fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .animate-fade-in {
+      opacity: 0;
+      transition: opacity 0.9s ease;
+    }
+
+    .animate-fade-in.visible {
+      opacity: 1;
+    }
+
+    /* ============================
+       6. HERO SECTION
+       ============================ */
+    #acasa {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      overflow: hidden;
+      padding: var(--space-16) var(--container-pad) var(--space-12);
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 60% 50% at 50% -10%, rgba(201,168,76,0.06) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 40% at 80% 80%, rgba(30,45,86,0.4) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    /* Noise texture overlay */
+    .hero-bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+      opacity: 0.4;
+    }
+
+    /* Decorative horizontal line */
+    .hero-line {
+      display: block;
+      width: 60px;
+      height: 1px;
+      background: var(--gold-400);
+      margin-bottom: var(--space-3);
+    }
+
+    .hero-pretitle {
+      font-family: var(--font-sans);
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold-400);
+      margin-bottom: var(--space-4);
+    }
+
+    .hero-name {
+      font-family: var(--font-serif);
+      font-weight: 300;
+      line-height: 1;
+      margin-bottom: var(--space-4);
+    }
+
+    .hero-name .line1 {
+      display: block;
+      font-size: clamp(3.5rem, 9vw, 7rem);
+      background: linear-gradient(135deg, var(--gold-400) 0%, var(--gold-200) 50%, var(--gold-300) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-name .line2 {
+      display: block;
+      font-size: clamp(3.5rem, 9vw, 7rem);
+      padding-left: clamp(1.5rem, 3vw, 3rem);
+      color: var(--cream-100);
+      -webkit-text-fill-color: var(--cream-100);
+    }
+
+    .hero-tagline {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-weight: 300;
+      font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+      color: var(--cream-200);
+      margin-bottom: var(--space-8);
+      letter-spacing: 0.03em;
+    }
+
+    .hero-tagline span {
+      color: var(--gold-400);
+      margin: 0 0.5rem;
+      opacity: 0.7;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: var(--space-3);
+      flex-wrap: wrap;
+      margin-bottom: var(--space-12);
+    }
+
+    .btn-primary {
+      font-family: var(--font-sans);
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--navy-950);
+      background: var(--gold-400);
+      border: 1px solid var(--gold-400);
+      padding: 0.875rem 2.5rem;
+      transition: background var(--transition-base), box-shadow var(--transition-base);
+    }
+
+    .btn-primary:hover {
+      background: var(--gold-300);
+      box-shadow: 0 0 30px var(--gold-glow);
+    }
+
+    .btn-secondary {
+      font-family: var(--font-sans);
+      font-size: 0.75rem;
+      font-weight: 400;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--cream-200);
+      background: transparent;
+      border: 1px solid rgba(245, 240, 232, 0.2);
+      padding: 0.875rem 2.5rem;
+      transition: border-color var(--transition-base), color var(--transition-base);
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--gold-400);
+      color: var(--gold-400);
+    }
+
+    /* Scroll indicator */
+    .scroll-indicator {
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--slate-500);
+      animation: pulse-down 2s ease-in-out infinite;
+    }
+
+    .scroll-arrow {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .scroll-arrow span {
+      display: block;
+      width: 8px;
+      height: 8px;
+      border-right: 1px solid var(--slate-500);
+      border-bottom: 1px solid var(--slate-500);
+      transform: rotate(45deg);
+      animation: arrow-down 1.5s ease-in-out infinite;
+    }
+
+    .scroll-arrow span:nth-child(2) { animation-delay: 0.2s; }
+
+    @keyframes arrow-down {
+      0%, 100% { opacity: 0.3; }
+      50% { opacity: 1; }
+    }
+
+    @keyframes pulse-down {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(4px); }
+    }
+
+    /* Hero entrance animation */
+    .hero-content > * {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: heroIn 0.8s ease forwards;
+    }
+
+    .hero-content > *:nth-child(1) { animation-delay: 0.2s; }
+    .hero-content > *:nth-child(2) { animation-delay: 0.35s; }
+    .hero-content > *:nth-child(3) { animation-delay: 0.5s; }
+    .hero-content > *:nth-child(4) { animation-delay: 0.65s; }
+    .hero-content > *:nth-child(5) { animation-delay: 0.8s; }
+
+    @keyframes heroIn {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ============================
+       7. ABOUT SECTION
+       ============================ */
+    #despre {
+      padding: var(--space-16) 0;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-12);
+      align-items: center;
+    }
+
+    /* Portrait frame — CSS only */
+    .portrait-frame {
+      position: relative;
+      aspect-ratio: 3/4;
+      max-width: 400px;
+    }
+
+    .portrait-inner {
+      position: absolute;
+      inset: 0;
+      background: var(--navy-800);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Decorative corner brackets */
+    .portrait-frame::before,
+    .portrait-frame::after {
+      content: '';
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      z-index: 2;
+    }
+
+    .portrait-frame::before {
+      top: -6px;
+      left: -6px;
+      border-top: 1px solid var(--gold-400);
+      border-left: 1px solid var(--gold-400);
+    }
+
+    .portrait-frame::after {
+      bottom: -6px;
+      right: -6px;
+      border-bottom: 1px solid var(--gold-400);
+      border-right: 1px solid var(--gold-400);
+    }
+
+    .portrait-corner-br::before,
+    .portrait-corner-br::after {
+      content: '';
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      z-index: 2;
+    }
+
+    .portrait-corner-br::before {
+      bottom: -6px;
+      left: -6px;
+      border-bottom: 1px solid var(--gold-400);
+      border-left: 1px solid var(--gold-400);
+    }
+
+    .portrait-corner-br::after {
+      top: -6px;
+      right: -6px;
+      border-top: 1px solid var(--gold-400);
+      border-right: 1px solid var(--gold-400);
+    }
+
+    /* Photo placeholder */
+    .portrait-placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: var(--space-3);
+      color: var(--slate-500);
+      font-size: 0.75rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    .portrait-placeholder i {
+      color: var(--navy-700);
+    }
+
+    .portrait-placeholder img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+      display: none; /* Hidden until real photo added */
+    }
+
+    .portrait-placeholder img.loaded {
+      display: block;
+    }
+
+    .about-text { }
+
+    .about-text .section-label { margin-bottom: var(--space-2); }
+
+    .about-body {
+      color: var(--cream-200);
+      font-size: 1rem;
+      line-height: 1.85;
+      margin: var(--space-4) 0;
+    }
+
+    .about-body p + p {
+      margin-top: var(--space-3);
+    }
+
+    .about-quote {
+      position: relative;
+      padding: var(--space-4) var(--space-4) var(--space-4) var(--space-6);
+      border-left: 1px solid var(--gold-400);
+      margin: var(--space-6) 0;
+    }
+
+    .about-quote::before {
+      content: '"';
+      position: absolute;
+      top: -0.5rem;
+      left: var(--space-3);
+      font-family: var(--font-serif);
+      font-size: 4rem;
+      color: var(--gold-400);
+      opacity: 0.3;
+      line-height: 1;
+    }
+
+    .about-quote p {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 1.15rem;
+      font-weight: 300;
+      color: var(--cream-100);
+      line-height: 1.6;
+    }
+
+    .about-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-4);
+      margin-top: var(--space-6);
+      padding-top: var(--space-6);
+      border-top: 1px solid rgba(201, 168, 76, 0.1);
+    }
+
+    .stat-item {
+      border-top: 2px solid var(--gold-400);
+      padding-top: var(--space-2);
+    }
+
+    .stat-number {
+      font-family: var(--font-serif);
+      font-size: 2.5rem;
+      font-weight: 300;
+      color: var(--gold-300);
+      line-height: 1;
+      display: block;
+    }
+
+    .stat-label {
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--slate-400);
+      margin-top: 0.25rem;
+    }
+
+    @media (max-width: 768px) {
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-8);
+      }
+
+      .portrait-frame {
+        max-width: 280px;
+        margin: 0 auto;
+      }
+
+      .about-stats {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    /* ============================
+       8. SERVICES SECTION
+       ============================ */
+    #servicii {
+      padding: var(--space-16) 0;
+      background: var(--navy-900);
+    }
+
+    .services-header {
+      text-align: center;
+      margin-bottom: var(--space-12);
+    }
+
+    .services-header .section-label {
+      justify-content: center;
+    }
+
+    .services-intro {
+      max-width: 600px;
+      margin: var(--space-4) auto 0;
+      color: var(--slate-400);
+      font-size: 1rem;
+      line-height: 1.8;
+      text-align: center;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: rgba(201, 168, 76, 0.08);
+    }
+
+    .service-card {
+      background: var(--navy-900);
+      padding: var(--space-8) var(--space-6);
+      border-top: 3px solid transparent;
+      transition: border-color var(--transition-base), background var(--transition-base), transform var(--transition-base);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: var(--navy-800);
+      opacity: 0;
+      transition: opacity var(--transition-base);
+    }
+
+    .service-card:hover {
+      border-top-color: var(--gold-400);
+      transform: translateY(-4px);
+    }
+
+    .service-card:hover::before {
+      opacity: 1;
+    }
+
+    .service-card > * { position: relative; z-index: 1; }
+
+    .service-icon {
+      width: 44px;
+      height: 44px;
+      border: 1px solid rgba(201, 168, 76, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: var(--space-4);
+      color: var(--gold-400);
+      transition: border-color var(--transition-base), box-shadow var(--transition-base);
+    }
+
+    .service-card:hover .service-icon {
+      border-color: var(--gold-400);
+      box-shadow: 0 0 20px var(--gold-glow);
+    }
+
+    .service-title {
+      font-family: var(--font-serif);
+      font-size: 1.3rem;
+      font-weight: 400;
+      color: var(--cream-100);
+      margin-bottom: var(--space-2);
+    }
+
+    .service-desc {
+      font-size: 0.875rem;
+      color: var(--slate-400);
+      line-height: 1.75;
+    }
+
+    @media (max-width: 1024px) {
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ============================
+       9. WHY CHOOSE ME
+       ============================ */
+    #de-ce {
+      padding: var(--space-16) 0;
+    }
+
+    .why-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-16);
+      align-items: start;
+    }
+
+    .why-left .section-title {
+      margin-top: var(--space-3);
+    }
+
+    .why-left p {
+      color: var(--slate-400);
+      font-size: 1rem;
+      line-height: 1.85;
+      margin-top: var(--space-4);
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-6);
+    }
+
+    .why-item {
+      padding: var(--space-4);
+      border-left: 2px solid rgba(201, 168, 76, 0.2);
+      transition: border-color var(--transition-base);
+    }
+
+    .why-item:hover {
+      border-left-color: var(--gold-400);
+    }
+
+    .why-item-icon {
+      color: var(--gold-400);
+      margin-bottom: var(--space-3);
+    }
+
+    .why-item-title {
+      font-family: var(--font-serif);
+      font-size: 1.1rem;
+      font-weight: 600;
+      font-style: italic;
+      color: var(--cream-100);
+      margin-bottom: var(--space-2);
+    }
+
+    .why-item-desc {
+      font-size: 0.875rem;
+      color: var(--slate-400);
+      line-height: 1.75;
+    }
+
+    @media (max-width: 1024px) {
+      .why-layout {
+        grid-template-columns: 1fr;
+        gap: var(--space-8);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .why-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ============================
+       10. PROCESS SECTION
+       ============================ */
+    #proces {
+      padding: var(--space-16) 0;
+      background: var(--navy-900);
+    }
+
+    .process-header {
+      text-align: center;
+      margin-bottom: var(--space-12);
+    }
+
+    .process-header .section-label {
+      justify-content: center;
+    }
+
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      position: relative;
+    }
+
+    /* Connecting line */
+    .process-steps::before {
+      content: '';
+      position: absolute;
+      top: 22px;
+      left: calc(12.5%);
+      right: calc(12.5%);
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold-200), var(--gold-200), transparent);
+      opacity: 0.2;
+    }
+
+    .process-step {
+      text-align: center;
+      padding: 0 var(--space-4);
+      position: relative;
+    }
+
+    .step-circle {
+      width: 44px;
+      height: 44px;
+      border: 1px solid var(--gold-400);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto var(--space-4);
+      position: relative;
+      background: var(--navy-900);
+    }
+
+    .step-number {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 1.4rem;
+      color: var(--gold-400);
+      line-height: 1;
+    }
+
+    .step-title {
+      font-family: var(--font-serif);
+      font-size: 1.1rem;
+      font-weight: 400;
+      color: var(--cream-100);
+      margin-bottom: var(--space-2);
+    }
+
+    .step-desc {
+      font-size: 0.8rem;
+      color: var(--slate-400);
+      line-height: 1.7;
+    }
+
+    @media (max-width: 768px) {
+      .process-steps {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-8);
+      }
+
+      .process-steps::before { display: none; }
+    }
+
+    @media (max-width: 480px) {
+      .process-steps {
+        grid-template-columns: 1fr;
+        gap: var(--space-6);
+      }
+    }
+
+    /* ============================
+       11. TESTIMONIALS
+       ============================ */
+    #testimoniale {
+      padding: var(--space-16) 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Giant background quote mark */
+    #testimoniale::before {
+      content: '"';
+      position: absolute;
+      top: -2rem;
+      left: -1rem;
+      font-family: var(--font-serif);
+      font-size: 25rem;
+      color: var(--gold-400);
+      opacity: 0.02;
+      line-height: 1;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    .testimonials-header {
+      text-align: center;
+      margin-bottom: var(--space-12);
+    }
+
+    .testimonials-header .section-label {
+      justify-content: center;
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-6);
+    }
+
+    .testimonial-card {
+      background: var(--navy-800);
+      padding: var(--space-6);
+      border-left: 2px solid var(--gold-400);
+      position: relative;
+    }
+
+    .testimonial-stars {
+      display: flex;
+      gap: 3px;
+      margin-bottom: var(--space-3);
+    }
+
+    .star {
+      width: 14px;
+      height: 14px;
+      background: var(--gold-400);
+      clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    }
+
+    .testimonial-text {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 1.05rem;
+      font-weight: 300;
+      color: var(--cream-200);
+      line-height: 1.7;
+      margin-bottom: var(--space-4);
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+      font-size: 0.8rem;
+    }
+
+    .testimonial-author::before {
+      content: '';
+      display: block;
+      width: 20px;
+      height: 1px;
+      background: var(--gold-400);
+    }
+
+    .author-name {
+      font-weight: 500;
+      color: var(--cream-100);
+      letter-spacing: 0.05em;
+    }
+
+    .author-location {
+      color: var(--slate-400);
+    }
+
+    @media (max-width: 768px) {
+      .testimonials-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ============================
+       12. CONTACT SECTION
+       ============================ */
+    #contact {
+      padding: var(--space-16) 0;
+      background: var(--navy-900);
+    }
+
+    .contact-header {
+      text-align: center;
+      margin-bottom: var(--space-12);
+    }
+
+    .contact-header .section-label {
+      justify-content: center;
+    }
+
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: var(--space-12);
+      align-items: start;
+    }
+
+    .contact-info-title {
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      font-weight: 300;
+      color: var(--cream-100);
+      margin-bottom: var(--space-6);
+      line-height: 1.3;
+    }
+
+    .contact-items {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-4);
+      margin-bottom: var(--space-8);
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--space-3);
+    }
+
+    .contact-item-icon {
+      width: 36px;
+      height: 36px;
+      border: 1px solid rgba(201, 168, 76, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold-400);
+      flex-shrink: 0;
+    }
+
+    .contact-item-text {
+      padding-top: 0.35rem;
+    }
+
+    .contact-item-label {
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--slate-500);
+      display: block;
+      margin-bottom: 0.2rem;
+    }
+
+    .contact-item-value {
+      font-size: 0.95rem;
+      color: var(--cream-200);
+    }
+
+    .contact-item-value a {
+      transition: color var(--transition-base);
+    }
+
+    .contact-item-value a:hover {
+      color: var(--gold-400);
+    }
+
+    .contact-social {
+      display: flex;
+      gap: var(--space-2);
+    }
+
+    .social-btn {
+      width: 40px;
+      height: 40px;
+      border: 1px solid rgba(201, 168, 76, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--slate-400);
+      transition: border-color var(--transition-base), color var(--transition-base);
+    }
+
+    .social-btn:hover {
+      border-color: var(--gold-400);
+      color: var(--gold-400);
+    }
+
+    /* Contact Form */
+    .contact-form {
+      background: var(--navy-800);
+      padding: var(--space-8);
+      border: 1px solid rgba(201, 168, 76, 0.08);
+    }
+
+    .form-title {
+      font-family: var(--font-serif);
+      font-size: 1.3rem;
+      font-weight: 400;
+      color: var(--cream-100);
+      margin-bottom: var(--space-6);
+      padding-bottom: var(--space-3);
+      border-bottom: 1px solid rgba(201, 168, 76, 0.1);
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-4);
+    }
+
+    .form-group {
+      margin-bottom: var(--space-4);
+    }
+
+    .form-label {
+      display: block;
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--slate-400);
+      margin-bottom: 0.5rem;
+    }
+
+    .form-input,
+    .form-select,
+    .form-textarea {
+      width: 100%;
+      background: var(--navy-900);
+      border: 1px solid rgba(201, 168, 76, 0.1);
+      color: var(--cream-100);
+      font-family: var(--font-sans);
+      font-size: 0.9rem;
+      font-weight: 300;
+      padding: 0.75rem 1rem;
+      outline: none;
+      transition: border-color var(--transition-base), box-shadow var(--transition-base);
+      appearance: none;
+    }
+
+    .form-input:focus,
+    .form-select:focus,
+    .form-textarea:focus {
+      border-color: var(--gold-400);
+      box-shadow: 0 0 0 3px var(--gold-glow);
+    }
+
+    .form-input::placeholder,
+    .form-textarea::placeholder {
+      color: var(--slate-500);
+    }
+
+    .form-select option {
+      background: var(--navy-800);
+    }
+
+    .form-textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .form-input.error,
+    .form-select.error,
+    .form-textarea.error {
+      border-color: #ef4444;
+    }
+
+    .form-error {
+      font-size: 0.7rem;
+      color: #ef4444;
+      margin-top: 0.25rem;
+      display: none;
+    }
+
+    .form-error.show { display: block; }
+
+    .btn-submit {
+      width: 100%;
+      background: transparent;
+      border: 1px solid var(--gold-400);
+      color: var(--gold-400);
+      font-family: var(--font-sans);
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      padding: 1rem;
+      cursor: pointer;
+      transition: background var(--transition-base), color var(--transition-base), box-shadow var(--transition-base);
+      margin-top: var(--space-2);
+    }
+
+    .btn-submit:hover {
+      background: var(--gold-400);
+      color: var(--navy-950);
+      box-shadow: 0 0 30px var(--gold-glow);
+    }
+
+    .btn-submit.success {
+      background: rgba(34, 197, 94, 0.15);
+      border-color: #22c55e;
+      color: #22c55e;
+    }
+
+    @media (max-width: 768px) {
+      .contact-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-form {
+        padding: var(--space-6) var(--space-4);
+      }
+    }
+
+    /* ============================
+       13. FOOTER
+       ============================ */
+    footer {
+      padding: var(--space-8) 0;
+      border-top: 1px solid rgba(201, 168, 76, 0.1);
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-4);
+      flex-wrap: wrap;
+    }
+
+    .footer-logo {
+      font-family: var(--font-serif);
+      font-size: 1rem;
+      color: var(--cream-200);
+    }
+
+    .footer-logo span { color: var(--gold-400); }
+
+    .footer-center {
+      text-align: center;
+    }
+
+    .footer-bar-text {
+      font-size: 0.7rem;
+      color: var(--slate-500);
+      letter-spacing: 0.1em;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: var(--space-4);
+    }
+
+    .footer-links a {
+      font-size: 0.7rem;
+      color: var(--slate-500);
+      letter-spacing: 0.1em;
+      transition: color var(--transition-base);
+    }
+
+    .footer-links a:hover {
+      color: var(--gold-400);
+    }
+
+    @media (max-width: 768px) {
+      .footer-inner {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+
+    /* ============================
+       14. MEDIA QUERIES EXTRAS
+       ============================ */
+    @media (max-width: 480px) {
+      .hero-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .hero-buttons .btn-primary,
+      .hero-buttons .btn-secondary {
+        width: 100%;
+        text-align: center;
+      }
+
+      .about-stats {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Scroll progress bar -->
+  <div id="scroll-progress"></div>
+
+  <!-- ========== NAVIGATION ========== -->
+  <nav id="navbar">
+    <a href="#acasa" class="nav-logo">
+      <span>Grozav</span> Svetlana
+    </a>
+
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#acasa">Acasă</a></li>
+      <li><a href="#despre">Despre</a></li>
+      <li><a href="#servicii">Servicii</a></li>
+      <li><a href="#proces">Proces</a></li>
+      <li><a href="#contact" class="nav-cta">Contact</a></li>
+    </ul>
+
+    <button class="nav-toggle" id="nav-toggle" aria-label="Meniu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <main>
+
+    <!-- ========== HERO ========== -->
+    <section id="acasa">
+      <div class="hero-bg"></div>
+      <div class="container">
+        <div class="hero-content">
+          <span class="hero-line"></span>
+          <p class="hero-pretitle">Avocat &bull; Republica Moldova</p>
+          <h1 class="hero-name">
+            <span class="line1">Grozav</span>
+            <span class="line2">Svetlana</span>
+          </h1>
+          <p class="hero-tagline">
+            Drept Civil <span>&bull;</span> Expertiză <span>&bull;</span> Încredere
+          </p>
+          <div class="hero-buttons">
+            <a href="#contact" class="btn-primary">Contactați-mă</a>
+            <a href="#servicii" class="btn-secondary">Serviciile mele</a>
+          </div>
+          <div class="scroll-indicator">
+            <div class="scroll-arrow">
+              <span></span>
+              <span></span>
+            </div>
+            Derulați în jos
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== ABOUT ========== -->
+    <section id="despre">
+      <div class="container">
+        <div class="about-grid">
+
+          <!-- Portrait -->
+          <div class="animate-fade-up">
+            <div class="portrait-frame portrait-corner-br">
+              <div class="portrait-inner">
+                <div class="portrait-placeholder" id="portrait-placeholder">
+                  <!-- Replace the icon below with an <img> tag when photo is available -->
+                  <i data-lucide="user" width="80" height="80"></i>
+                  <p>Fotografie în curând</p>
+                  <!-- Example for when photo is ready:
+                  <img src="foto-svetlana.jpg" alt="Avocat Grozav Svetlana" class="loaded">
+                  -->
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Text -->
+          <div class="about-text">
+            <div class="animate-fade-up">
+              <span class="section-label">Despre mine</span>
+              <h2 class="section-title">Profesionalism<br>în <em>fiecare detaliu</em></h2>
+            </div>
+
+            <div class="about-body animate-fade-up">
+              <p>
+                Cu o vastă experiență în domeniul dreptului civil din Republica Moldova,
+                ofer clienților mei consiliere juridică clară, soluții practice și o
+                reprezentare dedicată în fața instanțelor de judecată.
+              </p>
+              <p>
+                Sunt membră a Baroului Avocaților din Republica Moldova și am gestionat
+                cu succes cazuri complexe în domenii precum dreptul proprietății,
+                succesiunile, contractele civile și litigiile de drept comun.
+              </p>
+            </div>
+
+            <div class="about-quote animate-fade-up">
+              <p>„Fiecare caz este o poveste umană care merită să fie apărată cu toată seriozitatea și dedicarea."</p>
+            </div>
+
+            <div class="about-stats">
+              <div class="stat-item animate-fade-up">
+                <span class="stat-number" data-target="150" data-suffix="+">0</span>
+                <span class="stat-label">Cazuri soluționate</span>
+              </div>
+              <div class="stat-item animate-fade-up" style="--delay: 0.1s">
+                <span class="stat-number" data-target="10" data-suffix="+">0</span>
+                <span class="stat-label">Ani experiență</span>
+              </div>
+              <div class="stat-item animate-fade-up" style="--delay: 0.2s">
+                <span class="stat-number" data-target="95" data-suffix="%">0</span>
+                <span class="stat-label">Rata de succes</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SERVICES ========== -->
+    <section id="servicii">
+      <div class="container">
+        <div class="services-header animate-fade-up">
+          <span class="section-label">Ce ofer</span>
+          <h2 class="section-title">Domenii de <em>Practică</em></h2>
+          <p class="services-intro">
+            Servicii juridice specializate de drept civil, adaptate nevoilor dvs. individuale.
+            Fiecare caz beneficiază de atenție personalizată și o strategie juridică elaborată.
+          </p>
+        </div>
+
+        <div class="services-grid">
+
+          <div class="service-card animate-fade-up" style="--index:0">
+            <div class="service-icon">
+              <i data-lucide="scale" width="20" height="20"></i>
+            </div>
+            <h3 class="service-title">Litigii Civile</h3>
+            <p class="service-desc">Reprezentare profesionistă în instanță în cauze civile, apeluri și recursuri la toate nivelurile judiciare din Republica Moldova.</p>
+          </div>
+
+          <div class="service-card animate-fade-up" style="--index:1">
+            <div class="service-icon">
+              <i data-lucide="home" width="20" height="20"></i>
+            </div>
+            <h3 class="service-title">Dreptul Proprietății</h3>
+            <p class="service-desc">Tranzacții imobiliare, litigii de vecinătate, uzucapiune, partaj judiciar și extrajudiciar al bunurilor imobile.</p>
+          </div>
+
+          <div class="service-card animate-fade-up" style="--index:2">
+            <div class="service-icon">
+              <i data-lucide="file-text" width="20" height="20"></i>
+            </div>
+            <h3 class="service-title">Contracte și Obligații</h3>
+            <p class="service-desc">Redactarea, analiza și negocierea contractelor civile și comerciale. Rezolvarea eficientă a disputelor contractuale.</p>
+          </div>
+
+          <div class="service-card animate-fade-up" style="--index:3">
+            <div class="service-icon">
+              <i data-lucide="users" width="20" height="20"></i>
+            </div>
+            <h3 class="service-title">Dreptul Familiei</h3>
+            <p class="service-desc">Divorț, partajul bunurilor comune, stabilirea domiciliului copilului, pensie alimentară și alte cauze de dreptul familiei.</p>
+          </div>
+
+          <div class="service-card animate-fade-up" style="--index:4">
+            <div class="service-icon">
+              <i data-lucide="landmark" width="20" height="20"></i>
+            </div>
+            <h3 class="service-title">Succesiuni</h3>
+            <p class="service-desc">Asistență completă în proceduri succesorale, contestarea testamentelor, partajul și administrarea masei succesorale.</p>
+          </div>
+
+          <div class="service-card animate-fade-up" style="--index:5">
+            <div class="service-icon">
+              <i data-lucide="shield" width="20" height="20"></i>
+            </div>
+            <h3 class="service-title">Consultanță Juridică</h3>
+            <p class="service-desc">Consiliere preventivă pentru persoane fizice și juridice, avize juridice clare și due diligence contractual.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== WHY CHOOSE ME ========== -->
+    <section id="de-ce">
+      <div class="container">
+        <div class="why-layout">
+
+          <div class="why-left animate-fade-up">
+            <span class="section-label">De ce eu</span>
+            <h2 class="section-title">De ce să alegeți<br><em>Grozav Svetlana?</em></h2>
+            <p>
+              Combinând cunoașterea profundă a dreptului moldovenesc cu o abordare
+              umană și transparentă, ofer mai mult decât reprezentare juridică —
+              ofer un partener de încredere în momentele care contează cu adevărat.
+            </p>
+          </div>
+
+          <div class="why-grid">
+
+            <div class="why-item animate-fade-up" style="--index:0">
+              <div class="why-item-icon">
+                <i data-lucide="map-pin" width="22" height="22"></i>
+              </div>
+              <h3 class="why-item-title">Expertiză Locală</h3>
+              <p class="why-item-desc">Cunoașterea profundă a sistemului juridic moldovenesc și a practicii judiciare locale.</p>
+            </div>
+
+            <div class="why-item animate-fade-up" style="--index:1">
+              <div class="why-item-icon">
+                <i data-lucide="message-circle" width="22" height="22"></i>
+              </div>
+              <h3 class="why-item-title">Comunicare Transparentă</h3>
+              <p class="why-item-desc">Vă țin la curent în fiecare etapă a cazului, fără jargon juridic inutil.</p>
+            </div>
+
+            <div class="why-item animate-fade-up" style="--index:2">
+              <div class="why-item-icon">
+                <i data-lucide="fingerprint" width="22" height="22"></i>
+              </div>
+              <h3 class="why-item-title">Abordare Personalizată</h3>
+              <p class="why-item-desc">Fiecare caz primește atenție individuală — nu există soluții universale în drept.</p>
+            </div>
+
+            <div class="why-item animate-fade-up" style="--index:3">
+              <div class="why-item-icon">
+                <i data-lucide="trophy" width="22" height="22"></i>
+              </div>
+              <h3 class="why-item-title">Rezultate Demonstrate</h3>
+              <p class="why-item-desc">Istoric solid de cazuri câștigate și soluții amiabile obținute pentru clienți.</p>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== PROCESS ========== -->
+    <section id="proces">
+      <div class="container">
+        <div class="process-header animate-fade-up">
+          <span class="section-label">Cum lucrăm</span>
+          <h2 class="section-title">Procesul <em>nostru</em></h2>
+        </div>
+
+        <div class="process-steps">
+
+          <div class="process-step animate-fade-up" style="--index:0">
+            <div class="step-circle">
+              <span class="step-number">1</span>
+            </div>
+            <h3 class="step-title">Consultație Inițială</h3>
+            <p class="step-desc">Discutăm situația dvs. juridică și stabilim împreună obiectivele de urmat.</p>
+          </div>
+
+          <div class="process-step animate-fade-up" style="--index:1">
+            <div class="step-circle">
+              <span class="step-number">2</span>
+            </div>
+            <h3 class="step-title">Analiză a Cazului</h3>
+            <p class="step-desc">Studiem documentele, evaluăm temeiul juridic și identificăm toate opțiunile disponibile.</p>
+          </div>
+
+          <div class="process-step animate-fade-up" style="--index:2">
+            <div class="step-circle">
+              <span class="step-number">3</span>
+            </div>
+            <h3 class="step-title">Strategie Juridică</h3>
+            <p class="step-desc">Elaborăm planul de acțiune optim, adaptat specificului cazului dvs.</p>
+          </div>
+
+          <div class="process-step animate-fade-up" style="--index:3">
+            <div class="step-circle">
+              <span class="step-number">4</span>
+            </div>
+            <h3 class="step-title">Reprezentare & Soluție</h3>
+            <p class="step-desc">Acționăm în numele dvs. cu determinare și obținem rezultatul dorit.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== TESTIMONIALS ========== -->
+    <section id="testimoniale">
+      <div class="container">
+        <div class="testimonials-header animate-fade-up">
+          <span class="section-label">Clienți mulțumiți</span>
+          <h2 class="section-title">Ce spun <em>clienții</em></h2>
+        </div>
+
+        <div class="testimonials-grid">
+
+          <div class="testimonial-card animate-fade-up">
+            <div class="testimonial-stars">
+              <div class="star"></div><div class="star"></div><div class="star"></div>
+              <div class="star"></div><div class="star"></div>
+            </div>
+            <p class="testimonial-text">
+              „Datorită profesionalismului și dedicării doamnei avocat Grozav, am reușit
+              să rezolv un litigiu imobiliar complex care dura de trei ani. Abordarea
+              calmă și strategia bine gândită au făcut toată diferența. Recomand cu
+              toată încrederea."
+            </p>
+            <div class="testimonial-author">
+              <span class="author-name">M.P.</span>
+              <span class="author-location">— client, Chișinău</span>
+            </div>
+          </div>
+
+          <div class="testimonial-card animate-fade-up" style="--index:1">
+            <div class="testimonial-stars">
+              <div class="star"></div><div class="star"></div><div class="star"></div>
+              <div class="star"></div><div class="star"></div>
+            </div>
+            <p class="testimonial-text">
+              „Consiliere clară, onestă și la obiect. Am apreciat în mod deosebit
+              faptul că am fost informat la fiecare pas al procesului, fără surprize
+              neplăcute. Un avocat în care poți avea cu adevărat încredere."
+            </p>
+            <div class="testimonial-author">
+              <span class="author-name">A.C.</span>
+              <span class="author-location">— client, Bălți</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CONTACT ========== -->
+    <section id="contact">
+      <div class="container">
+        <div class="contact-header animate-fade-up">
+          <span class="section-label">Luați legătura</span>
+          <h2 class="section-title">Contactați-mă <em>astăzi</em></h2>
+        </div>
+
+        <div class="contact-layout">
+
+          <!-- Contact info -->
+          <div class="animate-fade-up">
+            <h3 class="contact-info-title">Sunt disponibilă pentru a vă asculta și a găsi împreună soluția potrivită.</h3>
+
+            <div class="contact-items">
+              <div class="contact-item">
+                <div class="contact-item-icon">
+                  <i data-lucide="phone" width="18" height="18"></i>
+                </div>
+                <div class="contact-item-text">
+                  <span class="contact-item-label">Telefon</span>
+                  <div class="contact-item-value">
+                    <a href="tel:+37300000000">+373 XX XXX XXX</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-item-icon">
+                  <i data-lucide="mail" width="18" height="18"></i>
+                </div>
+                <div class="contact-item-text">
+                  <span class="contact-item-label">Email</span>
+                  <div class="contact-item-value">
+                    <a href="mailto:svetlana@avocat.md">svetlana@avocat.md</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-item-icon">
+                  <i data-lucide="map-pin" width="18" height="18"></i>
+                </div>
+                <div class="contact-item-text">
+                  <span class="contact-item-label">Adresă</span>
+                  <div class="contact-item-value">mun. Chișinău, Republica Moldova</div>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-item-icon">
+                  <i data-lucide="clock" width="18" height="18"></i>
+                </div>
+                <div class="contact-item-text">
+                  <span class="contact-item-label">Program</span>
+                  <div class="contact-item-value">Luni – Vineri: 09:00 – 18:00</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-social">
+              <a href="#" class="social-btn" aria-label="Facebook">
+                <i data-lucide="facebook" width="16" height="16"></i>
+              </a>
+              <a href="#" class="social-btn" aria-label="LinkedIn">
+                <i data-lucide="linkedin" width="16" height="16"></i>
+              </a>
+              <a href="#" class="social-btn" aria-label="Instagram">
+                <i data-lucide="instagram" width="16" height="16"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Contact form -->
+          <div class="animate-fade-up">
+            <form class="contact-form" id="contact-form" novalidate>
+              <h3 class="form-title">Trimiteți o solicitare</h3>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="name">Nume complet *</label>
+                  <input type="text" id="name" name="name" class="form-input" placeholder="Ion Popescu">
+                  <span class="form-error" id="name-error">Introduceți numele dvs.</span>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="contact-input">Telefon / Email *</label>
+                  <input type="text" id="contact-input" name="contact" class="form-input" placeholder="+373 XX XXX XXX">
+                  <span class="form-error" id="contact-error">Introduceți un contact valid.</span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="subject">Domeniu de interes *</label>
+                <select id="subject" name="subject" class="form-select">
+                  <option value="">Selectați domeniul...</option>
+                  <option value="litigii">Litigii Civile</option>
+                  <option value="proprietate">Dreptul Proprietății</option>
+                  <option value="contracte">Contracte și Obligații</option>
+                  <option value="familie">Dreptul Familiei</option>
+                  <option value="succesiuni">Succesiuni</option>
+                  <option value="consultanta">Consultanță Juridică</option>
+                  <option value="altele">Altele</option>
+                </select>
+                <span class="form-error" id="subject-error">Selectați un domeniu.</span>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="message">Descrieți situația dvs. *</label>
+                <textarea id="message" name="message" class="form-textarea" placeholder="Descrieți pe scurt situația juridică pentru care aveți nevoie de asistență..."></textarea>
+                <span class="form-error" id="message-error">Vă rugăm descrieți situația dvs.</span>
+              </div>
+
+              <button type="submit" class="btn-submit" id="submit-btn">
+                Trimiteți Solicitarea
+              </button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-logo">
+          <span>Grozav</span> Svetlana &mdash; Avocat
+        </div>
+        <div class="footer-center">
+          <p class="footer-bar-text">Barou Avocaților din Republica Moldova &bull; &copy; 2025</p>
+        </div>
+        <div class="footer-links">
+          <a href="#">Confidențialitate</a>
+          <a href="#">Termeni</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // ============================
+    // 1. Init Lucide Icons
+    // ============================
+    lucide.createIcons();
+
+    // ============================
+    // 2. Scroll Progress Bar
+    // ============================
+    const progressBar = document.getElementById('scroll-progress');
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+      progressBar.style.width = progress + '%';
+    }, { passive: true });
+
+    // ============================
+    // 3. Sticky Nav
+    // ============================
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 80) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    }, { passive: true });
+
+    // ============================
+    // 4. Mobile Menu Toggle
+    // ============================
+    const navToggle = document.getElementById('nav-toggle');
+    const navLinks = document.getElementById('nav-links');
+
+    navToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+    });
+
+    // Close menu on link click
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+      });
+    });
+
+    // ============================
+    // 5. Scroll Animations (Intersection Observer)
+    // ============================
+    const animateEls = document.querySelectorAll('.animate-fade-up, .animate-fade-in');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          const index = parseInt(el.style.getPropertyValue('--index') || 0);
+          const delay = index * 100;
+          setTimeout(() => {
+            el.classList.add('visible');
+          }, delay);
+          observer.unobserve(el);
+        }
+      });
+    }, {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    });
+
+    animateEls.forEach(el => observer.observe(el));
+
+    // ============================
+    // 6. Stats Counter Animation
+    // ============================
+    const statNumbers = document.querySelectorAll('.stat-number[data-target]');
+
+    const countObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          const target = parseInt(el.getAttribute('data-target'));
+          const suffix = el.getAttribute('data-suffix') || '';
+          const duration = 1800;
+          const step = target / (duration / 16);
+          let current = 0;
+
+          const timer = setInterval(() => {
+            current += step;
+            if (current >= target) {
+              current = target;
+              clearInterval(timer);
+            }
+            el.textContent = Math.floor(current) + suffix;
+          }, 16);
+
+          countObserver.unobserve(el);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    statNumbers.forEach(el => countObserver.observe(el));
+
+    // ============================
+    // 7. Contact Form Validation
+    // ============================
+    const form = document.getElementById('contact-form');
+    const submitBtn = document.getElementById('submit-btn');
+
+    function showError(fieldId, errorId) {
+      document.getElementById(fieldId).classList.add('error');
+      document.getElementById(errorId).classList.add('show');
+    }
+
+    function clearError(fieldId, errorId) {
+      document.getElementById(fieldId).classList.remove('error');
+      document.getElementById(errorId).classList.remove('show');
+    }
+
+    // Live validation on blur
+    document.getElementById('name').addEventListener('blur', function() {
+      if (this.value.trim().length > 1) clearError('name', 'name-error');
+    });
+
+    document.getElementById('contact-input').addEventListener('blur', function() {
+      if (this.value.trim().length > 4) clearError('contact-input', 'contact-error');
+    });
+
+    document.getElementById('subject').addEventListener('change', function() {
+      if (this.value) clearError('subject', 'subject-error');
+    });
+
+    document.getElementById('message').addEventListener('blur', function() {
+      if (this.value.trim().length > 10) clearError('message', 'message-error');
+    });
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      let valid = true;
+
+      const name = document.getElementById('name').value.trim();
+      const contact = document.getElementById('contact-input').value.trim();
+      const subject = document.getElementById('subject').value;
+      const message = document.getElementById('message').value.trim();
+
+      if (name.length < 2) { showError('name', 'name-error'); valid = false; }
+      else clearError('name', 'name-error');
+
+      if (contact.length < 5) { showError('contact-input', 'contact-error'); valid = false; }
+      else clearError('contact-input', 'contact-error');
+
+      if (!subject) { showError('subject', 'subject-error'); valid = false; }
+      else clearError('subject', 'subject-error');
+
+      if (message.length < 10) { showError('message', 'message-error'); valid = false; }
+      else clearError('message', 'message-error');
+
+      if (valid) {
+        submitBtn.textContent = 'Mesaj trimis ✓';
+        submitBtn.classList.add('success');
+        submitBtn.disabled = true;
+        form.reset();
+
+        setTimeout(() => {
+          submitBtn.textContent = 'Trimiteți Solicitarea';
+          submitBtn.classList.remove('success');
+          submitBtn.disabled = false;
+        }, 5000);
+      }
+    });
+  </script>
+
+</body>
+</html>

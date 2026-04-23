@@ -1,0 +1,160 @@
+---
+interface Props {
+  preview?: boolean;
+}
+
+const { preview = false } = Astro.props;
+
+const services = [
+  {
+    title: 'Litigii Civile',
+    desc: 'Reprezentare profesionistă în instanță în cauze civile, apeluri și recursuri la toate nivelurile judiciare din Republica Moldova.',
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22V12M12 12L7 7M12 12L17 7M3 12h4M17 12h4M12 2v4"/><circle cx="12" cy="22" r="1"/></svg>`,
+  },
+  {
+    title: 'Dreptul Proprietății',
+    desc: 'Tranzacții imobiliare, litigii de vecinătate, uzucapiune, partaj judiciar și extrajudiciar al bunurilor imobile.',
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>`,
+  },
+  {
+    title: 'Succesiuni și Moșteniri',
+    desc: 'Asistență completă în proceduri succesorale, contestarea testamentelor, partajul și administrarea masei succesorale.',
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>`,
+  },
+  {
+    title: 'Contracte Civile',
+    desc: 'Redactarea, analiza și negocierea contractelor civile și comerciale. Rezolvarea eficientă a disputelor contractuale.',
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>`,
+  },
+  {
+    title: 'Dreptul Familiei',
+    desc: 'Divorț, partajul bunurilor comune, stabilirea domiciliului copilului, pensie alimentară și alte cauze de dreptul familiei.',
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>`,
+  },
+  {
+    title: 'Consultanță Juridică',
+    desc: 'Consiliere preventivă pentru persoane fizice și juridice, avize juridice clare și due diligence contractual.',
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>`,
+  },
+];
+
+const displayServices = preview ? services.slice(0, 3) : services;
+---
+
+<section id="servicii" style="padding: 8rem 0; background: var(--navy-900);">
+  <div class="container">
+    <div class="services-header animate-fade-up">
+      <span class="section-label" style="justify-content: center; display: flex;">Ce ofer</span>
+      <h2 class="section-title" style="text-align: center;">Domenii de <em>Practică</em></h2>
+      <p style="max-width: 600px; margin: 1.5rem auto 0; color: var(--slate-400); font-size: 1rem; line-height: 1.8; text-align: center;">
+        Servicii juridice specializate de drept civil, adaptate nevoilor dvs. individuale.
+        Fiecare caz beneficiază de atenție personalizată și o strategie juridică elaborată.
+      </p>
+    </div>
+
+    <div class="services-grid">
+      {displayServices.map((service, i) => (
+        <div class="service-card animate-fade-up" style={`--index: ${i};`}>
+          <div class="service-icon" set:html={service.icon} />
+          <h3 class="service-title">{service.title}</h3>
+          <p class="service-desc">{service.desc}</p>
+        </div>
+      ))}
+    </div>
+
+    {preview && (
+      <div style="text-align: center; margin-top: 3rem;" class="animate-fade-up">
+        <a href="/servicii" class="btn-secondary">Vezi toate serviciile</a>
+      </div>
+    )}
+  </div>
+</section>
+
+<style>
+  .services-header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: rgba(201, 168, 76, 0.08);
+  }
+
+  .service-card {
+    background: var(--navy-900);
+    padding: 4rem 2rem;
+    border-top: 3px solid transparent;
+    transition: border-color 0.3s ease, background 0.3s ease, transform 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .service-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--navy-800);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .service-card:hover {
+    border-top-color: var(--gold-400);
+    transform: translateY(-4px);
+  }
+
+  .service-card:hover::before {
+    opacity: 1;
+  }
+
+  .service-card > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  .service-icon {
+    width: 44px;
+    height: 44px;
+    border: 1px solid rgba(201, 168, 76, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    color: var(--gold-400);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .service-card:hover .service-icon {
+    border-color: var(--gold-400);
+    box-shadow: 0 0 20px var(--gold-glow);
+  }
+
+  .service-title {
+    font-family: var(--font-serif);
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: var(--cream-100);
+    margin-bottom: 0.75rem;
+  }
+
+  .service-desc {
+    font-size: 0.875rem;
+    color: var(--slate-400);
+    line-height: 1.75;
+  }
+
+  @media (max-width: 1024px) {
+    .services-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 640px) {
+    .services-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

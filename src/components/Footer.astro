@@ -1,0 +1,70 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer style="padding: 3rem 0; border-top: 1px solid rgba(201, 168, 76, 0.1); background: var(--navy-950);">
+  <div class="container">
+    <div class="footer-inner">
+
+      <div class="footer-logo">
+        <a href="/" style="font-family: var(--font-serif); font-size: 1rem; color: var(--cream-200);">
+          <span style="color: var(--gold-400);">Grozav</span> Svetlana
+        </a>
+        <p style="font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--slate-500); margin-top: 0.25rem;">Avocat • Republica Moldova</p>
+      </div>
+
+      <div class="footer-center">
+        <p class="footer-bar-text">Baroul Avocaților din Republica Moldova &bull; &copy; {currentYear} Grozav Svetlana. Toate drepturile rezervate.</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="/#acasa">Acasă</a>
+        <a href="/#despre">Despre</a>
+        <a href="/servicii">Servicii</a>
+        <a href="/#contact">Contact</a>
+      </div>
+
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .footer-bar-text {
+    font-size: 0.7rem;
+    color: var(--slate-500);
+    letter-spacing: 0.1em;
+    text-align: center;
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .footer-links a {
+    font-size: 0.7rem;
+    color: var(--slate-500);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+  }
+
+  .footer-links a:hover {
+    color: var(--gold-400);
+  }
+
+  @media (max-width: 768px) {
+    .footer-inner {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+</style>

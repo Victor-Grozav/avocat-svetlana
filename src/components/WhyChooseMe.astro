@@ -1,0 +1,113 @@
+---
+const reasons = [
+  {
+    title: 'Expertiză Locală',
+    desc: 'Cunoașterea profundă a sistemului juridic moldovenesc și a practicii judiciare locale.',
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>`,
+  },
+  {
+    title: 'Comunicare Transparentă',
+    desc: 'Vă țin la curent în fiecare etapă a cazului, fără jargon juridic inutil.',
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>`,
+  },
+  {
+    title: 'Abordare Personalizată',
+    desc: 'Fiecare caz primește atenție individuală — nu există soluții universale în drept.',
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>`,
+  },
+  {
+    title: 'Rezultate Demonstrate',
+    desc: 'Istoric solid de cazuri câștigate și soluții amiabile obținute pentru clienți.',
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8M12 17V21M7 4h10l1 7H6l1-7zM12 11v2"/></svg>`,
+  },
+];
+---
+
+<section id="de-ce" style="padding: 8rem 0; background: var(--navy-950);">
+  <div class="container">
+    <div class="why-layout">
+
+      <div class="why-left animate-fade-up">
+        <span class="section-label">De ce eu</span>
+        <h2 class="section-title">De ce să alegeți<br><em>Grozav Svetlana?</em></h2>
+        <p style="color: var(--slate-400); font-size: 1rem; line-height: 1.85; margin-top: 1.5rem;">
+          Combinând cunoașterea profundă a dreptului moldovenesc cu o abordare
+          umană și transparentă, ofer mai mult decât reprezentare juridică —
+          ofer un partener de încredere în momentele care contează cu adevărat.
+        </p>
+        <div style="margin-top: 2.5rem;">
+          <a href="/#contact" class="btn-primary">Luați legătura</a>
+        </div>
+      </div>
+
+      <div class="why-grid">
+        {reasons.map((r, i) => (
+          <div class="why-item animate-fade-up" style={`--index: ${i};`}>
+            <div class="why-item-icon" set:html={r.icon} />
+            <h3 class="why-item-title">{r.title}</h3>
+            <p class="why-item-desc">{r.desc}</p>
+          </div>
+        ))}
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  .why-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8rem;
+    align-items: start;
+  }
+
+  .why-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+
+  .why-item {
+    padding: 1.5rem;
+    border-left: 2px solid rgba(201, 168, 76, 0.2);
+    transition: border-color 0.3s ease;
+  }
+
+  .why-item:hover {
+    border-left-color: var(--gold-400);
+  }
+
+  .why-item-icon {
+    color: var(--gold-400);
+    margin-bottom: 1rem;
+  }
+
+  .why-item-title {
+    font-family: var(--font-serif);
+    font-size: 1.1rem;
+    font-weight: 600;
+    font-style: italic;
+    color: var(--cream-100);
+    margin-bottom: 0.75rem;
+  }
+
+  .why-item-desc {
+    font-size: 0.875rem;
+    color: var(--slate-400);
+    line-height: 1.75;
+  }
+
+  @media (max-width: 1024px) {
+    .why-layout {
+      grid-template-columns: 1fr;
+      gap: 4rem;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .why-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

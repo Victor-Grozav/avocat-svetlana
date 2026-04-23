@@ -1,0 +1,64 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Contact from '../components/Contact.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout
+  title="Contact | Avocat Grozav Svetlana — Chișinău, Republica Moldova"
+  description="Contactați avocat Grozav Svetlana pentru consultație juridică în Chișinău. Telefon, email, program de lucru și formular de contact online."
+>
+  <Header />
+  <main>
+
+    <!-- Page Hero -->
+    <section style="padding: 10rem clamp(1.5rem, 5vw, 4rem) 4rem; background: var(--navy-950); position: relative; overflow: hidden;">
+      <div style="position: absolute; inset: 0; background: radial-gradient(ellipse 60% 50% at 50% -10%, rgba(201,168,76,0.05) 0%, transparent 70%); pointer-events: none;"></div>
+      <div class="container" style="position: relative; z-index: 1;">
+        <div style="max-width: 600px;">
+          <span class="section-label">Luați legătura</span>
+          <h1 class="section-title">Sunt la<br><em>dispoziția dvs.</em></h1>
+          <p style="color: var(--slate-400); font-size: 1rem; line-height: 1.85; margin-top: 1.5rem;">
+            Nu ezitați să mă contactați pentru orice întrebare sau pentru a programa o consultație. Prima discuție este gratuită.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <Contact />
+
+    <!-- Map placeholder section -->
+    <section style="padding: 0 0 6rem; background: var(--navy-900);">
+      <div class="container">
+        <div style="background: var(--navy-800); border: 1px solid rgba(201, 168, 76, 0.08); padding: 3rem; display: flex; align-items: center; justify-content: center; gap: 2rem; flex-wrap: wrap;" class="animate-fade-up">
+          <div style="text-align: center;">
+            <div style="color: var(--gold-400); margin-bottom: 1rem;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <p style="font-family: var(--font-serif); font-size: 1.3rem; color: var(--cream-100); margin-bottom: 0.5rem;">mun. Chișinău</p>
+            <p style="font-size: 0.85rem; color: var(--slate-400);">Republica Moldova</p>
+          </div>
+          <div style="width: 1px; height: 60px; background: rgba(201, 168, 76, 0.15);"></div>
+          <div style="text-align: center;">
+            <div style="color: var(--gold-400); margin-bottom: 1rem;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <p style="font-family: var(--font-serif); font-size: 1.3rem; color: var(--cream-100); margin-bottom: 0.5rem;">Luni – Vineri</p>
+            <p style="font-size: 0.85rem; color: var(--slate-400);">09:00 – 18:00</p>
+          </div>
+          <div style="width: 1px; height: 60px; background: rgba(201, 168, 76, 0.15);"></div>
+          <div style="text-align: center;">
+            <div style="color: var(--gold-400); margin-bottom: 1rem;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.6 1.21h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.8a16 16 0 0 0 6.29 6.29l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <p style="font-family: var(--font-serif); font-size: 1.3rem; color: var(--cream-100); margin-bottom: 0.5rem;">Răspuns rapid</p>
+            <p style="font-size: 0.85rem; color: var(--slate-400);">În aceeași zi lucrătoare</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <Footer />
+</BaseLayout>

@@ -1,0 +1,144 @@
+---
+---
+
+<section id="despre" style="padding: 8rem 0; background: var(--navy-950);">
+  <div class="container">
+    <div class="about-grid">
+
+      <!-- Text Content -->
+      <div class="about-text">
+        <div class="animate-fade-up">
+          <span class="section-label">Despre mine</span>
+          <h2 class="section-title">Profesionalism<br>în <em>fiecare detaliu</em></h2>
+        </div>
+
+        <div class="about-body animate-fade-up">
+          <p>
+            Cu o vastă experiență în domeniul dreptului civil din Republica Moldova,
+            ofer clienților mei consiliere juridică clară, soluții practice și o
+            reprezentare dedicată în fața instanțelor de judecată.
+          </p>
+          <p>
+            Sunt membră a Baroului Avocaților din Republica Moldova și am gestionat
+            cu succes cazuri complexe în domenii precum dreptul proprietății,
+            succesiunile, contractele civile și litigiile de drept comun.
+          </p>
+        </div>
+
+        <div class="about-quote animate-fade-up">
+          <span class="about-quote-mark">&ldquo;</span>
+          <p>Fiecare caz este o poveste umană care merită să fie apărată cu toată seriozitatea și dedicarea.</p>
+        </div>
+
+        <div class="about-stats">
+          <div class="stat-item animate-fade-up">
+            <span class="stat-number" data-target="150" data-suffix="+">0</span>
+            <span class="stat-label">Cazuri soluționate</span>
+          </div>
+          <div class="stat-item animate-fade-up" style="--index: 1;">
+            <span class="stat-number" data-target="20" data-suffix="+">0</span>
+            <span class="stat-label">Ani de experiență</span>
+          </div>
+          <div class="stat-item animate-fade-up" style="--index: 2;">
+            <span class="stat-number" data-target="95" data-suffix="%">0</span>
+            <span class="stat-label">Rata de succes</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 820px;
+    margin: 0 auto;
+  }
+
+  .about-body {
+    color: var(--cream-200);
+    font-size: 1rem;
+    line-height: 1.85;
+    margin: 1.5rem 0;
+  }
+
+  .about-body p + p {
+    margin-top: 1.25rem;
+  }
+
+  .about-quote {
+    position: relative;
+    margin: 2.5rem 0;
+    padding: 2rem 2rem 2rem 2.5rem;
+    border-left: 2px solid var(--gold-400);
+    background: rgba(201, 168, 76, 0.03);
+  }
+
+  .about-quote-mark {
+    display: block;
+    font-family: var(--font-serif);
+    font-size: 5rem;
+    color: var(--gold-400);
+    opacity: 0.25;
+    line-height: 0.6;
+    margin-bottom: 0.5rem;
+    user-select: none;
+  }
+
+  .about-quote p {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: clamp(1.15rem, 2vw, 1.4rem);
+    font-weight: 300;
+    color: var(--cream-100);
+    line-height: 1.65;
+  }
+
+  .about-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+    padding-top: 2.5rem;
+    border-top: 1px solid rgba(201, 168, 76, 0.1);
+  }
+
+  .stat-item {
+    border-top: 2px solid var(--gold-400);
+    padding-top: 0.75rem;
+  }
+
+  .stat-number {
+    font-family: var(--font-serif);
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: var(--gold-300);
+    line-height: 1;
+    display: block;
+  }
+
+  .stat-label {
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--slate-400);
+    margin-top: 0.25rem;
+    display: block;
+  }
+
+  @media (max-width: 900px) {
+    .about-stats {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media (max-width: 480px) {
+    .about-stats {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

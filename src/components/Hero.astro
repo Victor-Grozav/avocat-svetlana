@@ -1,0 +1,369 @@
+---
+---
+
+<section id="acasa" style="position: relative; min-height: 100vh; display: flex; align-items: center; overflow: hidden; padding: 8rem clamp(1.5rem, 5vw, 4rem) 6rem;">
+  <!-- Background -->
+  <div style="position: absolute; inset: 0; background: radial-gradient(ellipse 60% 50% at 50% -10%, rgba(201,168,76,0.06) 0%, transparent 70%), radial-gradient(ellipse 40% 40% at 80% 80%, rgba(30,45,86,0.4) 0%, transparent 60%); pointer-events: none;"></div>
+
+  <div class="container" style="width: 100%; position: relative; z-index: 1;">
+    <div class="hero-grid">
+
+      <!-- Left: Text Content -->
+      <div class="hero-content">
+        <span class="hero-line"></span>
+        <p class="hero-pretitle">Avocat &bull; Republica Moldova</p>
+        <h1 class="hero-name">
+          <span class="line1">Grozav</span>
+          <span class="line2">Svetlana</span>
+        </h1>
+        <p class="hero-tagline">
+          Reprezentare juridică <span>&bull;</span> de <em>încredere</em>
+        </p>
+        <p class="hero-subtitle">
+          Servicii juridice profesionale de drept civil în Republica Moldova. Litigii, proprietate, succesiuni, contracte, dreptul familiei.
+        </p>
+        <div class="hero-buttons">
+          <a href="/#contact" class="btn-primary">Consultație gratuită</a>
+          <a href="/servicii" class="btn-secondary">Serviciile mele</a>
+        </div>
+        <div class="scroll-indicator">
+          <div class="scroll-arrow">
+            <span></span>
+            <span></span>
+          </div>
+          Derulați în jos
+        </div>
+      </div>
+
+      <!-- Right: Photo -->
+      <div class="hero-photo-container animate-fade-in">
+        <div class="hero-photo-frame">
+          <div class="hero-photo-inner">
+            <img
+              src="/images/svetlana-grozav.png"
+              alt="Avocat Grozav Svetlana"
+              class="hero-photo"
+              loading="eager"
+            />
+          </div>
+          <!-- Gold corner accents -->
+          <div class="corner corner-tl"></div>
+          <div class="corner corner-tr"></div>
+          <div class="corner corner-bl"></div>
+          <div class="corner corner-br"></div>
+        </div>
+        <!-- Decorative elements -->
+        <div class="hero-deco-line"></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .hero-content > * {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: heroIn 0.8s ease forwards;
+  }
+
+  .hero-content > *:nth-child(1) { animation-delay: 0.2s; }
+  .hero-content > *:nth-child(2) { animation-delay: 0.35s; }
+  .hero-content > *:nth-child(3) { animation-delay: 0.5s; }
+  .hero-content > *:nth-child(4) { animation-delay: 0.65s; }
+  .hero-content > *:nth-child(5) { animation-delay: 0.75s; }
+  .hero-content > *:nth-child(6) { animation-delay: 0.85s; }
+  .hero-content > *:nth-child(7) { animation-delay: 0.95s; }
+
+  @keyframes heroIn {
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero-line {
+    display: block;
+    width: 60px;
+    height: 1px;
+    background: var(--gold-400);
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-pretitle {
+    font-family: var(--font-sans);
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold-400);
+    margin-bottom: 2rem;
+  }
+
+  .hero-name {
+    font-family: var(--font-serif);
+    font-weight: 300;
+    line-height: 1;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-name .line1 {
+    display: block;
+    font-size: clamp(3.5rem, 8vw, 6.5rem);
+    color: var(--gold-400);
+  }
+
+  .hero-name .line2 {
+    display: block;
+    font-size: clamp(3.5rem, 8vw, 6.5rem);
+    padding-left: clamp(1.5rem, 3vw, 3rem);
+    color: var(--cream-100);
+    -webkit-text-fill-color: var(--cream-100);
+  }
+
+  .hero-tagline {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-weight: 300;
+    font-size: clamp(1rem, 2vw, 1.3rem);
+    color: var(--cream-200);
+    margin-bottom: 1rem;
+    letter-spacing: 0.03em;
+  }
+
+  .hero-tagline span {
+    color: var(--gold-400);
+    margin: 0 0.4rem;
+    opacity: 0.7;
+    font-style: normal;
+  }
+
+  .hero-tagline em {
+    color: var(--gold-300);
+  }
+
+  .hero-subtitle {
+    font-size: 0.9rem;
+    color: var(--slate-400);
+    line-height: 1.8;
+    margin-bottom: 2.5rem;
+    max-width: 420px;
+  }
+
+  .hero-buttons {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+  }
+
+  .scroll-indicator {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--slate-500);
+    animation: pulse-down 2s ease-in-out infinite;
+  }
+
+  .scroll-arrow {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  .scroll-arrow span {
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-right: 1px solid var(--slate-500);
+    border-bottom: 1px solid var(--slate-500);
+    transform: rotate(45deg);
+    animation: arrow-down 1.5s ease-in-out infinite;
+  }
+
+  .scroll-arrow span:nth-child(2) { animation-delay: 0.2s; }
+
+  @keyframes arrow-down {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 1; }
+  }
+
+  @keyframes pulse-down {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(4px); }
+  }
+
+  /* Photo container */
+  .hero-photo-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-photo-frame {
+    position: relative;
+    width: 100%;
+    max-width: 420px;
+    aspect-ratio: 3/4;
+  }
+
+  .hero-photo-inner {
+    position: absolute;
+    inset: 12px;
+    background: var(--navy-800);
+    overflow: hidden;
+  }
+
+  .hero-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+  }
+
+  /* Corner brackets */
+  .corner {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+  }
+
+  .corner-tl {
+    top: 0;
+    left: 0;
+    border-top: 1px solid var(--gold-400);
+    border-left: 1px solid var(--gold-400);
+  }
+
+  .corner-tr {
+    top: 0;
+    right: 0;
+    border-top: 1px solid var(--gold-400);
+    border-right: 1px solid var(--gold-400);
+  }
+
+  .corner-bl {
+    bottom: 0;
+    left: 0;
+    border-bottom: 1px solid var(--gold-400);
+    border-left: 1px solid var(--gold-400);
+  }
+
+  .corner-br {
+    bottom: 0;
+    right: 0;
+    border-bottom: 1px solid var(--gold-400);
+    border-right: 1px solid var(--gold-400);
+  }
+
+  /* Decorative elements */
+  .hero-deco-line {
+    position: absolute;
+    right: -20px;
+    top: 20%;
+    width: 1px;
+    height: 40%;
+    background: linear-gradient(to bottom, transparent, var(--gold-400), transparent);
+    opacity: 0.3;
+  }
+
+  .hero-deco-dot {
+    position: absolute;
+    left: -15px;
+    bottom: 25%;
+    width: 6px;
+    height: 6px;
+    background: var(--gold-400);
+    border-radius: 50%;
+    opacity: 0.5;
+  }
+
+  @media (max-width: 900px) {
+    .hero-grid {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+
+    .hero-photo-container {
+      order: -1;
+    }
+
+    .hero-photo-frame {
+      max-width: 280px;
+    }
+  }
+
+  /* Mobile: compact card layout */
+  @media (max-width: 768px) {
+    section {
+      padding: 7.5rem 1.5rem 4rem !important;
+      min-height: auto !important;
+      align-items: flex-start !important;
+    }
+
+    .hero-grid {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+
+    /* Photo after text on mobile */
+    .hero-photo-container {
+      order: 2;
+    }
+
+    .hero-photo-frame {
+      max-width: 100%;
+      aspect-ratio: 3 / 4;
+    }
+
+    .hero-deco-line,
+    .hero-deco-dot {
+      display: none;
+    }
+
+    .hero-line {
+      display: none;
+    }
+
+    .hero-name .line1,
+    .hero-name .line2 {
+      font-size: clamp(2.8rem, 14vw, 4rem) !important;
+    }
+
+    .hero-name .line2 {
+      padding-left: 0 !important;
+    }
+
+    .hero-subtitle {
+      max-width: 100%;
+      font-size: 0.875rem;
+    }
+
+    .hero-buttons {
+      flex-direction: column;
+      align-items: stretch;
+      margin-bottom: 2rem;
+    }
+
+    .hero-buttons .btn-primary,
+    .hero-buttons .btn-secondary {
+      width: 100%;
+      text-align: center;
+    }
+
+    .scroll-indicator {
+      display: none;
+    }
+  }
+</style>
