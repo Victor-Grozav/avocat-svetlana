@@ -32,6 +32,8 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
+  background-color: var(--navy-950);
+  overflow-x: hidden;
 }
 
 body {
@@ -40,13 +42,14 @@ body {
   font-family: var(--font-sans);
   font-weight: 300;
   line-height: 1.7;
-  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
 }
 
-/* Safe area cover — acoperă zona notch/status bar pe iOS Safari */
-body::before {
-  content: '';
+/* Safe area cover — acoperă zona notch/status bar pe iOS Safari.
+   Folosim un element real (#safe-area-cover), nu body::before,
+   fiindcă pseudo-elementele cu position:fixed pe body pot fi
+   capricioase pe Safari iOS. */
+#safe-area-cover {
   position: fixed;
   top: 0;
   left: 0;
@@ -54,6 +57,7 @@ body::before {
   height: env(safe-area-inset-top, 0px);
   background: var(--navy-950);
   z-index: 1002;
+  pointer-events: none;
 }
 
 /* Noise texture overlay — adds depth to flat navy backgrounds */
