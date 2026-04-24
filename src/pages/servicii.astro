@@ -140,7 +140,7 @@ const services = [
       <div class="container">
         <div class="services-detail-grid">
           {services.map((service, i) => (
-            <div class="service-detail-card animate-fade-up" style={`--index: ${i};`}>
+            <div class="service-detail-card animate-fade-up" style={`--index: ${i % 2};`}>
               <div class="service-detail-header">
                 <div class="service-detail-icon" set:html={service.icon} />
                 <div>
